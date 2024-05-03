@@ -1,0 +1,16 @@
+{
+  "name": "lviv-dim-db-migration",
+  "version": "1.0.0",
+  "description": "DB migration for mongoose",
+  "scripts": {
+    "install": "npm ci",
+    "create": "npx migrate-mongo create",
+    "migrate-dev": "env-cmd -f .dev.env npx migrate-mongo up",
+    "migrate-prod": "env-cmd -f .prod.env npx migrate-mongo up"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "migrate-mongo": "^11.0.0"
+  }
+}
